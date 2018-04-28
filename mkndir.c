@@ -2,7 +2,7 @@
 #include <syscalls.h>
 #include <linux/linkage.h>
 #include <linux/unistd.h>
-#include <strings.h>
+#include <string.h>
 
 
 asmlinkage long sys_mkndir(const short int n, const char * nome, mode_t mode){
