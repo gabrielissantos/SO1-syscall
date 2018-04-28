@@ -10,10 +10,12 @@ asmlinkage long sys_mkndir(const short int n, const char * nome, mode_t mode){
 
 	// Por default, se mkdir nao funciona, retorna -1
 	for(i = 0; i < n; i++){
-		char palavra[3];
-		int aux = i;
-		sprintf(palavra, %i, aux);
-		strcat(palavra, nome);
+
+		//tentativa de por "i" como char na frente de nome.
+		char palavra[3]; //numero de pastas de até 3 algarismos
+		int aux = i; //conteudo de aux será transformado em char
+		sprintf(palavra, %i, aux); //transforma aux em palavra
+		strcat(palavra, nome); //concatena 
 		
 
 		/* TODO: Por "i" como char na frente de nome.
