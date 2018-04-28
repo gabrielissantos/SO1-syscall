@@ -4,7 +4,7 @@
 
 int main(){
 	char * nomeDir = "diretorio";
-	int r = syscall(357,nomeDir, S_IRUSR | S_IWUSR | S_IXUSR); // tentativa de criacao em modo usuario
+	int r = syscall(357, 10, nomeDir, S_IRUSR | S_IWUSR | S_IXUSR); // tentativa de criacao em modo usuario
 	if(r == -1)
 		printf("Erro ao criar o diretorio.\n");
 	if(r == 0)
