@@ -1,3 +1,4 @@
+#include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -9,4 +10,9 @@ int main(){
 		printf("Erro ao criar o diretorio.\n");
 	if(r == 0)
 		printf("Diretorio %s criado com sucesso!\n");
+	else{
+		printf("Nao foi possivel acessar a chamada.\n");
+		printf("%d\n", r);
+	}
+	return 0;
 }
