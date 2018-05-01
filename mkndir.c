@@ -1,14 +1,14 @@
 // Qual biblioteca chama o sys_mkdir??
-#include <syscalls.h>
+#include <linux/syscalls.h>
 #include <linux/linkage.h>
 #include <linux/unistd.h>
-#include <string.h>
-#include <malloc.h>
+#include <linux/string.h>
 
 int contaDigitos(const int n);
 
 asmlinkage long sys_mkndir(const short int n, const char * nome, mode_t mode){
-	int i;	
+	int i;
+	int len = strlen(nome);
 	char * appended = (char*) malloc (len+1);
 	char * index;
 
@@ -21,7 +21,7 @@ asmlinkage long sys_mkndir(const short int n, const char * nome, mode_t mode){
 		// Por default, se mkdir nao funciona, retorna -1
 		if(sys_mkdir(appended, mode) == -1) return -1;
 	}
-	free(aux);
+	free(appended);
 	// Se funciona, retorna 0
 	return 0;
 }
