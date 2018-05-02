@@ -12,7 +12,7 @@ Cria _n_ diretórios com o mesmo nome base.
 
 ## Modo de execucao do `ex-mkndir`:
 
-`./ex-mkndir \[nome do diretorio\] \[numero de diretorios\]`
+`./ex-mkndir [nome do diretorio] [numero de diretorios]`
 
 ## Alunos
 - Gabrieli Santos
