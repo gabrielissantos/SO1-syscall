@@ -15,6 +15,6 @@ Cria _n_ diretórios com o mesmo nome base.
 `./ex-mkndir \[nome do diretorio\] \[numero de diretorios\]`
 
 ## Alunos
-Gabrieli Santos
-João Gabriel Melo Barbirato
-Rodrigo Pesse de Abreu
+- Gabrieli Santos
+- João Gabriel Melo Barbirato
+- Rodrigo Pesse de Abreu
